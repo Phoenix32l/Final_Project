@@ -1,0 +1,64 @@
+<%- include('layout/header') %>
+<!-- display table with user info -->
+<div class="container">
+  <div class="row my-4">
+<!-- deleted code here -->
+        <div class="container mt-5">
+            <% if (users.length > 0) { %> 
+                <table class="table table-hover table-dark">
+                    <thead>
+                        <tr class="table-dark">
+                            <th>ID</th>
+                            <th>Image</th>
+                            <th>Dish Name</th>
+                            <th>Ingredients</th>
+                            <th>Instructions</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                      <% users.forEach((row, index) => { %>
+                      <tr class="align-middle">
+                            <td class="align-middle"><%= index %></td>
+                            <td><img src="<%= row.image %>" width="50" class="img-thumbnail" ></td>
+                            <td><%= row.dish %></td>
+                            <td><%= row.ingredients %></td>
+                            <td><%= row.instructions %></td>
+                            <td>
+                                <a href="/edit/<%= row._id %>" class="text-success"><i class="fas fa-edit fa-lg mx-1"></i></a>
+                                <a href="#" class="text-danger delete-btn" data-id="<%= row._id %>"><i class="fas fa-trash fa-lg mx-1"></i></a>
+                            </td>
+                        </tr> 
+                      <% }) %>
+                    </tbody>
+                </table>
+            <% } else { %>
+                <h1 class="text-center text-secondary mt-5">No recipes inserted yet!</h1>
+            <% } %>
+        </div>
+    </div>
+  </div>  
+</div>
+
+<%- include('layout/footer') %>
+
+<!-- Add this script for confirmation dialog -->
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const deleteButtons = document.querySelectorAll('.delete-btn');
+
+//Confirmation for delete
+    deleteButtons.forEach(button => {
+      button.addEventListener('click', function (event) {
+        event.preventDefault();
+
+        const userId = this.getAttribute('data-id');
+        const confirmation = confirm('Are you sure you want to delete this recipe?');
+
+        if (confirmation) {
+          window.location.href = '/delete/' + userId;
+        }
+      });
+    });
+  });
+</script>

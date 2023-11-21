@@ -1,0 +1,41 @@
+@import url('https://fonts.cdnfonts.com/css/pacifico');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Pacifico&display=swap');
+
+
+
+/* Reset to  default styles */
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-image: url(Cookies.png);
+    color: #dfd3d3;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* NAV */
+nav li {
+    margin-right: 20px;
+}
+
+nav a {
+    font-weight: bold;
+    font-family: 'Pacifico', sans-serif;
+}
+
+/* Main content styles */
+main {
+    padding: 20px 0;
+}
+
+/* Footer styles */
+footer {
+    margin-top: auto;
+}
+
+/* Apply specific styles to certain elements as needed */
