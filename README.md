@@ -1,8 +1,10 @@
-Abdullah Umair (100871634)
-Saim Khan (100876325)
-Eshal Arif ()
-Muntaha Ali ()
-Anusha Shahid ()
+Authors:
+
+Abdullah Umair
+Saim Khan
+Anusha Shahid
+Muntaha Ali
+Eshal Arif
 
 
-Recipe Book
+This web app serves as your personal digital recipe book. Easily input, modify, and delete your favourite recipes.
