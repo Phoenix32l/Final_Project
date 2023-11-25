@@ -7,16 +7,16 @@
       <div class="card shadow">
         <!-- Card Header -->
         <div class="card-header bg-success">
-          <!-- Display Student Name in Header -->
+          <!-- Display Recipe Name in Header -->
           <h3 class="text-light">Edit Recipe (<%= user.dish %>)</h3>
         </div>
 
         <!-- Card Body -->
         <div class="card-body p-4">
-          <!-- Edit Student Form -->
+          <!-- Edit Recipe Form -->
           <form action="/update/<%= user._id %>" method="post" id="add-form" enctype="multipart/form-data">
 
-            <!-- Student Name Input -->
+            <!-- Recipe Name Input -->
             <div class="mb-3">
               <label for="dish">Dish Name</label>
               <input type="text" name="dish" class="form-control form-control-lg" placeholder="Enter Dish" value="<%= user.dish %>" required />
@@ -28,7 +28,7 @@
               <input type="text" name="ingredients" class="form-control form-control-lg" placeholder="Enter Ingredients" value="<%= user.ingredients %>" required />
             </div>
 
-            <!-- Student ID Input -->
+            <!-- Recipe ID Input -->
             <div class="mb-3">
               <label for="instructions">Instructions</label>
               <input type="text" name="instructions" class="form-control form-control-lg" placeholder="Enter Instructions" value="<%= user.instructions %>" required />

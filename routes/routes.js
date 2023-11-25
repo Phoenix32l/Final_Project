@@ -32,7 +32,7 @@ router.post("/add", upload, async (req, res) => {
 
         req.session.message = {
             type: "success",
-            message: "Student added successfully!",
+            message: "Recipe added successfully!",
         };
         res.redirect("/");
     } catch (err) {
